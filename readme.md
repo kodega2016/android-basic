@@ -1,8 +1,10 @@
 #### Basic Android App Structure
 Android application has mainly following folders.
-- java
-    ``contains kotlin/java files that holds logic of the application``
-- res
-    ``contains layouts and string values,colors``
 
-> The process of connecting view and activity is known as layout-inflation.
+#### java
+- contains all the kotlin/java code that holds the logic of the application.
+
+#### res
+- contains all the design(xml) files and strings themes,values,colors
+
+> The process of connecting view and the logic is known as layout inflation and starts when the activity starts
