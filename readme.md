@@ -62,3 +62,35 @@ We need to give a unique id to the view and find the view by id in the Activity 
 var button:Button=findViewById(R.id.roll_button);
 button.text="I am from MainActivity";
 ```
+
+#### Add Interacitivty
+We need to get the view by id and setOnClick listener to the button
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    diceImage=findViewById(R.id.dice_image);
+
+    var button:Button=findViewById(R.id.roll_button);
+
+    button.setOnClickListener{
+        rollDice();
+    }
+}
+
+fun rollDice(){
+    var dice:Int= Random.nextInt(6)+1;
+    var drawableResource=when(dice){
+        1->R.drawable.dice_1
+        2->R.drawable.dice_2
+        3->R.drawable.dice_3
+        4->R.drawable.dice_4
+        5->R.drawable.dice_5
+        else->R.drawable.dice_6
+    }
+
+    diceImage.setImageResource(drawableResource);
+
+}
+```
