@@ -47,3 +47,18 @@ class MainActivity:AppCompatActivity(){
     }
 }
 ```
+
+#### Layout binding
+We need to give a unique id to the view and find the view by id in the Activity as
+```xml
+<Button
+    android:id="@+id/roll_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/roll"
+/>
+
+var button:Button=findViewById(R.id.roll_button);
+button.text="I am from MainActivity";
+```
